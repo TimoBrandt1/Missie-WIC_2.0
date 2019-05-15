@@ -1,30 +1,30 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 public class Patrol : MonoBehaviour
 {
-    public float speed;
-    public Transform groundDetection;
-    private bool movingRight = true;
+    public Transform pos1;
+    public Transform pos2;
+
+    private NavMeshAgent agent;
     private void Start()
     {
-        
+        agent = gameObject.GetComponent<NavMeshAgent>();
     }
     private void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f);
-        if(groundInfo.collider == false)
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "1")
         {
-            if(movingRight == true)
-            {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingRight = false;
-            } else
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-            }
+            agent.SetDestination(pos2.position);
+        }
+        if (other.tag == "2")
+        {
+            agent.SetDestination(pos1.position);
         }
     }
 }
