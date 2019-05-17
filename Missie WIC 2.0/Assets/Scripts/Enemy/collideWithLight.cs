@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class collideWithLight : MonoBehaviour
 {
-    public GameObject nasa;
     // Start is called before the first frame update
     void Start()
     {

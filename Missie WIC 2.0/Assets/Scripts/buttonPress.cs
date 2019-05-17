@@ -21,6 +21,7 @@ public class buttonPress : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             player.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+            player.gameObject.transform.eulerAngles = new Vector3(0,0,180);
         }
     }
 }
