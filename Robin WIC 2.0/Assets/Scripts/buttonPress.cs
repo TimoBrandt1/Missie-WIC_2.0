@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonPress : CharacterController2D
+public class buttonPress : CharacterController2D
 {
     public GameObject player;
     public GameObject nasa;
