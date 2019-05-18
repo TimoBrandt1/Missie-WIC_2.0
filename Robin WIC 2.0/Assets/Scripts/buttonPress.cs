@@ -22,12 +22,12 @@ public class ButtonPress : CharacterController2D
                 nasa2.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
                 nasa3.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
                 nasa4.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-                player.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-                nasa.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-                nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-                nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-                nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-                player.GetComponent<CharacterController2D>().m_JumpForce = 400;
+                player.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                player.GetComponent<CharacterController2D>().m_JumpForce = 450;
                 ReversedGravity = false;
             }
             else 
@@ -42,7 +42,7 @@ public class ButtonPress : CharacterController2D
                 nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-                player.GetComponent<CharacterController2D>().m_JumpForce = -400;
+                player.GetComponent<CharacterController2D>().m_JumpForce = -450;
                 ReversedGravity = true;
             }
         }
