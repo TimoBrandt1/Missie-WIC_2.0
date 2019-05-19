@@ -1,19 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class buttonPress : CharacterController2D
+public class ButtonPress : CharacterController2D
 {
     public GameObject player;
     public GameObject nasa;
     public GameObject nasa2;
     public GameObject nasa3;
     public GameObject nasa4;
-    private bool ReversedGravity = false;
-
+    public bool ReversedGravity = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "player")
         {            
             if (ReversedGravity == true)
             {
