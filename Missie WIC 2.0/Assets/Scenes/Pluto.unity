@@ -286,7 +286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86968133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.561721, y: -3.65, z: 0}
+  m_LocalPosition: {x: -6.01, y: -3.7, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 1218345458}
@@ -324,7 +324,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.049, y: 0.050629824}
+  m_Offset: {x: -0.048999995, y: 0.12920165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -335,7 +335,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.40506077, y: 1.2912602}
+  m_Size: {x: 0.40506077, y: 1.4484038}
   m_EdgeRadius: 0
 --- !u!50 &86968138
 Rigidbody2D:
@@ -2840,7 +2840,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0010430515, y: -0.12426476}
@@ -2956,7 +2956,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e9bb53c25ad5b4aa14fad5847c57a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_JumpForce: 450
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_GroundCheck: {fileID: 491451177}
+  m_CeilingCheck: {fileID: 20703074}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   player: {fileID: 86968133}
+  nasa: {fileID: 1942545949}
+  nasa2: {fileID: 882158231}
+  nasa3: {fileID: 573336950}
+  nasa4: {fileID: 162750594}
+  ReversedGravity: 0
 --- !u!95 &1976167394
 Animator:
   serializedVersion: 3

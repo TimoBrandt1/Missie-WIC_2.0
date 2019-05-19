@@ -2,26 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class buttonPress : MonoBehaviour
+public class ButtonPress : CharacterController2D
 {
     public GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public GameObject nasa;
+    public GameObject nasa2;
+    public GameObject nasa3;
+    public GameObject nasa4;
+    public bool ReversedGravity = false;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
-            player.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-            player.gameObject.transform.eulerAngles = new Vector3(0,0,180);
+            if (ReversedGravity == true)
+            {
+                player.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                nasa.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                nasa2.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                nasa3.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                nasa4.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                player.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                player.GetComponent<CharacterController2D>().m_JumpForce = 450;
+                ReversedGravity = false;
+            }
+            if (ReversedGravity == false)
+            {
+                player.gameObject.transform.eulerAngles = new Vector3(180, 0, 0);
+                nasa.gameObject.transform.eulerAngles = new Vector3(180, 0, 0);
+                nasa2.gameObject.transform.eulerAngles = new Vector3(180, 0, 0);
+                nasa3.gameObject.transform.eulerAngles = new Vector3(180, 0, 0);
+                nasa4.gameObject.transform.eulerAngles = new Vector3(180, 0, 0);
+                player.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                player.GetComponent<CharacterController2D>().m_JumpForce = -450;
+                ReversedGravity = true;
+            }
         }
     }
 }
