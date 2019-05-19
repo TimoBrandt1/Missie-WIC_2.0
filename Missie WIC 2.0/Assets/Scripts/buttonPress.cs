@@ -26,7 +26,7 @@ public class ButtonPress : CharacterController2D
                 nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-                player.GetComponent<CharacterController2D>().m_JumpForce = 500;
+                player.GetComponent<CharacterController2D>().m_JumpForce = 525;
                 ReversedGravity = false;
             }
             if (ReversedGravity == false)
@@ -41,7 +41,7 @@ public class ButtonPress : CharacterController2D
                 nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-                player.GetComponent<CharacterController2D>().m_JumpForce = -500;
+                player.GetComponent<CharacterController2D>().m_JumpForce = -525;
                 ReversedGravity = true;
             }
         }
