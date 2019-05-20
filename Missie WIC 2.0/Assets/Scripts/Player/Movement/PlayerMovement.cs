@@ -45,6 +45,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsCrouching", isCrouching);
 
     }
+    public void Seen()
+    {
+        animator.SetBool("Seen", true);
+    }
 
     void FixedUpdate()
     {
