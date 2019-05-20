@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ButtonPress : CharacterController2D
 {
@@ -12,9 +10,9 @@ public class ButtonPress : CharacterController2D
     public bool ReversedGravity = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if(collision.gameObject.tag == "Button")
         {
-            if (ReversedGravity == true)
+            if(ReversedGravity == true)
             {
                 player.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
                 nasa.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
