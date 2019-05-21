@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     public float runSpeed = 40f;
+    public bool seen = false;
 
     float horizontalMove = 0f;
 
@@ -19,23 +20,40 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         CheckJump();
+
+        CheckSeen();
     }
     public void CheckJump()
     {
+        if (GameObject.Find("Player").GetComponent<CharacterController2D>().m_Grounded == false)
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", false);
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            animator.SetBool("IsJumping", true);
+
+        }
+    }
+    public void CheckSeen()
+    {
+        if (seen == true)
+        {
+            animator.SetBool("Seen", true);
+        }
+        if (seen == false)
+        {
+            animator.SetBool("Seen", false);
         }
     }
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
-    }
-
-    public void Seen()
-    {
-        animator.SetBool("Seen", true);
     }
 
     void FixedUpdate()
