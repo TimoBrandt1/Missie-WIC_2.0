@@ -19,8 +19,8 @@ public class EnemyFollow : MonoBehaviour
     IEnumerator timer()
     {
         yield return new WaitForSeconds(5);
-        GameObject.Find("Player").GetComponent<Patrol>().enabled = true;
-        GameObject.Find("Player").GetComponent<EnemyFollow>().enabled = false;
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<Patrol>().enabled = true;
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyFollow>().enabled = false;
     }
 
     // Update is called once per frame

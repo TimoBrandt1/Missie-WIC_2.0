@@ -20,7 +20,7 @@ public class collideWithLight : MonoBehaviour
         if (col.gameObject.name == "Player")
         {
             //Activate follow Script
-            gameObject.GetComponent<EnemyFollow>().enabled = true;
+            //gameObject.GetComponent<EnemyFollow>().enabled = true;
             gameObject.GetComponent<Patrol>().enabled = false;
             GameObject.Find("Player").GetComponent<PlayerMovement>().seen = true;
             StartCoroutine(timer());
