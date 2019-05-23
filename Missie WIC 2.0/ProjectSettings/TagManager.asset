@@ -9,6 +9,8 @@ TagManager:
   - 2
   - Button
   - MaxFollowPos
+  - Gun
+  - Bullet
   layers:
   - Default
   - TransparentFX

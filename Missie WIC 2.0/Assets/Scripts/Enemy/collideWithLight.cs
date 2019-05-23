@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class collideWithLight : MonoBehaviour
 {
+    public GameObject Gun;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,17 +23,23 @@ public class collideWithLight : MonoBehaviour
         {
             //Activate follow Script
             //gameObject.GetComponent<EnemyFollow>().enabled = true;
-            gameObject.GetComponent<Patrol>().enabled = false;
             GameObject.Find("Player").GetComponent<PlayerMovement>().seen = true;
-            StartCoroutine(timer());
-            
+            GameObject.Find("Player").GetComponent<CharacterController2D>().enabled = false;
+
+            Destroy(Gun);
+            gameObject.GetComponent<NasaAnimation>().SpottedAlienWithLight = true;
+            gameObject.GetComponent<Patrol>().enabled = false;
+
+            StartCoroutine(Timer());
         }
 
     }
 
-    IEnumerator timer()
+    IEnumerator Timer()
     {
         yield return new WaitForSeconds(1);
-        GameObject.Find("Player").GetComponent<PlayerMovement>().seen = false;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("GameOver");
     }
 }
