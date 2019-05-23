@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public Collider2D test;
     private bool Hit = false;
     // Start is called before the first frame update
     void Update()
@@ -26,18 +25,20 @@ public class Bullet : MonoBehaviour
             hitInfo.gameObject.GetComponent<collideWithLight>().enabled = false;
             StartCoroutine(Timer());
             Hit = true;
-            test = hitInfo;
-
         }
         Destroy(gameObject, 1);
     }
  
     IEnumerator Timer()
     {
-        
         yield return new WaitForSeconds(1f);
-        test.GetComponent<Patrol>().enabled = true;
-        test.GetComponent<collideWithLight>().enabled = true;
-        Debug.Log(test);
+        GameObject.Find("nasa (1)").GetComponent<Patrol>().enabled = true;
+        GameObject.Find("nasa (1)").GetComponent<collideWithLight>().enabled = true;
+        GameObject.Find("nasa (2)").GetComponent<Patrol>().enabled = true;
+        GameObject.Find("nasa (2)").GetComponent<collideWithLight>().enabled = true;
+        GameObject.Find("nasa (3)").GetComponent<Patrol>().enabled = true;
+        GameObject.Find("nasa (3)").GetComponent<collideWithLight>().enabled = true;
+        GameObject.Find("nasa (4)").GetComponent<Patrol>().enabled = true;
+        GameObject.Find("nasa (4)").GetComponent<collideWithLight>().enabled = true;
     }
 }
