@@ -403,7 +403,6 @@ GameObject:
   - component: {fileID: 86968141}
   - component: {fileID: 86968143}
   - component: {fileID: 86968142}
-  - component: {fileID: 86968144}
   - component: {fileID: 86968145}
   m_Layer: 8
   m_Name: Player
@@ -660,18 +659,6 @@ MonoBehaviour:
   bulletPrebaf: {fileID: 8766668765599459858, guid: 8eb7365436ed7594584ebe3e65c75037,
     type: 3}
   Ammo: 10
---- !u!114 &86968144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86968133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f8d02addfc7394aba0f62c8bec4456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &86968145
 MonoBehaviour:
   m_ObjectHideFlags: 0
