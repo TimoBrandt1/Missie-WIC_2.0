@@ -16,7 +16,7 @@ public class buttonClick : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            SceneManager.LoadScene("Pluto");
+            SceneManager.LoadScene("Tutorial");
         }
     }
 }

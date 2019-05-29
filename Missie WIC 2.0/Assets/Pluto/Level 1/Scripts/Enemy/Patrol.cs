@@ -18,7 +18,6 @@ public class Patrol : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("LOl");
         if (moveingRight == true)
         {
             //transform.Translate(direction* speed * Time.deltaTime);
