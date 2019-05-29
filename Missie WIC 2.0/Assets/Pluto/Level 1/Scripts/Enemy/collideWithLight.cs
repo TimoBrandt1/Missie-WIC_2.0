@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class collideWithLight : MonoBehaviour
 {
-    public GameObject Gun;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +24,7 @@ public class collideWithLight : MonoBehaviour
             //gameObject.GetComponent<EnemyFollow>().enabled = true;
             GameObject.Find("Player").GetComponent<PlayerMovement>().seen = true;
             GameObject.Find("Player").GetComponent<CharacterController2D>().enabled = false;
-
-            Destroy(Gun);
+            GameObject.Find("Player").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             gameObject.GetComponent<NasaAnimation>().SpottedAlienWithLight = true;
             gameObject.GetComponent<Patrol>().enabled = false;
 

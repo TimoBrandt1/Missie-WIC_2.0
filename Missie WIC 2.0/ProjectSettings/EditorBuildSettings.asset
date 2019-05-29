@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Mainscreen.unity
     guid: b47859c476ac27b4386c121447d473e3
   - enabled: 1
-    path: Assets/Scenes/Pluto.unity
+    path: Assets/Scenes/Pluto/Backup/Pluto.unity
     guid: 26ae70bac9de0d748856c6cbca2f2ac6
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
