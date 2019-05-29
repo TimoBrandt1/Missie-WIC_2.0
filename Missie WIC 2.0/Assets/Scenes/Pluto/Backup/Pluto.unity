@@ -403,7 +403,6 @@ GameObject:
   - component: {fileID: 86968141}
   - component: {fileID: 86968143}
   - component: {fileID: 86968145}
-  - component: {fileID: 86968142}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -611,38 +610,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &86968142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86968133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdd14f78b7fd1cd4182d675e522d759c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 55
-  m_GroundCheck: {fileID: 491451177}
-  m_CeilingCheck: {fileID: 20703074}
-  m_Grounded: 0
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  player: {fileID: 86968133}
-  nasa: {fileID: 1942545949}
-  nasa2: {fileID: 1242356463}
-  nasa3: {fileID: 386400186}
-  nasa4: {fileID: 2117121464}
-  VectorX: 0
 --- !u!114 &86968143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,7 +1476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7fb720821ac71409f48b40e361345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 1218345456}
 --- !u!1 &399526815
 GameObject:
   m_ObjectHideFlags: 0
@@ -3692,7 +3658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7fb720821ac71409f48b40e361345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 1218345456}
 --- !u!1 &1246200563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,6 +4491,8 @@ GameObject:
   - component: {fileID: 1593032274}
   - component: {fileID: 1593032273}
   - component: {fileID: 1593032272}
+  - component: {fileID: 1593032271}
+  - component: {fileID: 1593032275}
   m_Layer: 0
   m_Name: button
   m_TagString: Button
@@ -4547,6 +4514,42 @@ Transform:
   m_Father: {fileID: 509269166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &1593032271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593032269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd14f78b7fd1cd4182d675e522d759c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_GroundCheck: {fileID: 491451177}
+  m_CeilingCheck: {fileID: 20703074}
+  m_Grounded: 0
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  player: {fileID: 86968133}
+  nasa: {fileID: 1942545949}
+  nasa2: {fileID: 1242356463}
+  nasa3: {fileID: 386400186}
+  nasa4: {fileID: 2117121464}
+  enemies:
+  - {fileID: 1942545949}
+  - {fileID: 1242356463}
+  - {fileID: 386400186}
+  - {fileID: 2117121464}
 --- !u!61 &1593032272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4647,6 +4650,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1593032275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593032269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos1: {fileID: 1554774216}
+  pos2: {fileID: 1842355319}
+  speed: 0
 --- !u!1 &1598404587
 GameObject:
   m_ObjectHideFlags: 0
@@ -5587,7 +5605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7fb720821ac71409f48b40e361345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 1218345456}
 --- !u!68 &1942545955
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -6408,7 +6425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7fb720821ac71409f48b40e361345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 1218345456}
 --- !u!1 &2125978209
 GameObject:
   m_ObjectHideFlags: 0
