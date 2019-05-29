@@ -9,7 +9,7 @@ public class Patrol : MonoBehaviour
     public float speed;
     private bool moveingRight;
     private NavMeshAgent agent;
-    Vector2 direction;
+    //Vector2 direction;
     private void Start()
     {
         moveingRight = true;
@@ -27,7 +27,7 @@ public class Patrol : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        direction = -direction;
+        //direction = -direction;
         if (other.gameObject.tag == "1")
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
