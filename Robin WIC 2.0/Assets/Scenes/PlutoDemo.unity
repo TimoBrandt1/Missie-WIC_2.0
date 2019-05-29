@@ -487,7 +487,6 @@ GameObject:
   - component: {fileID: 131947295}
   - component: {fileID: 131947299}
   - component: {fileID: 131947298}
-  - component: {fileID: 131947301}
   - component: {fileID: 131947302}
   - component: {fileID: 131947300}
   m_Layer: 8
@@ -675,44 +674,6 @@ MonoBehaviour:
   - {fileID: 1222041667}
   - {fileID: 578039997}
   - {fileID: 93520981}
---- !u!114 &131947301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131947293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8877b9104af46e34d9287ff5defe5831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 450
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  m_GroundCheck: {fileID: 1182249863}
-  m_CeilingCheck: {fileID: 342044203}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  player: {fileID: 131947293}
-  nasa: {fileID: 2125205411}
-  nasa2: {fileID: 873105759}
-  nasa3: {fileID: 1581930531}
-  nasa4: {fileID: 2005395834}
-  ReversedGravity: 0
 --- !u!114 &131947302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,6 +1472,7 @@ GameObject:
   - component: {fileID: 613591669}
   - component: {fileID: 613591668}
   - component: {fileID: 613591667}
+  - component: {fileID: 613591670}
   m_Layer: 0
   m_Name: button (2)
   m_TagString: Button
@@ -1632,6 +1594,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &613591670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613591665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8877b9104af46e34d9287ff5defe5831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_GroundCheck: {fileID: 1182249863}
+  m_CeilingCheck: {fileID: 342044203}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  Xpos: 0
+  Ypos: 0
+  player: {fileID: 131947293}
+  nasa: {fileID: 2125205411}
+  nasa2: {fileID: 873105759}
+  nasa3: {fileID: 1581930531}
+  nasa4: {fileID: 2005395834}
 --- !u!1 &684647851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +1645,7 @@ GameObject:
   - component: {fileID: 684647855}
   - component: {fileID: 684647854}
   - component: {fileID: 684647853}
+  - component: {fileID: 684647856}
   m_Layer: 0
   m_Name: button (1)
   m_TagString: Button
@@ -1765,6 +1767,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &684647856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684647851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8877b9104af46e34d9287ff5defe5831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_GroundCheck: {fileID: 1182249863}
+  m_CeilingCheck: {fileID: 342044203}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  Xpos: 0
+  Ypos: 0
+  player: {fileID: 131947293}
+  nasa: {fileID: 2125205411}
+  nasa2: {fileID: 873105759}
+  nasa3: {fileID: 1581930531}
+  nasa4: {fileID: 2005395834}
 --- !u!1 &691232325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,6 +4288,7 @@ GameObject:
   - component: {fileID: 1895264099}
   - component: {fileID: 1895264102}
   - component: {fileID: 1895264101}
+  - component: {fileID: 1895264103}
   m_Layer: 0
   m_Name: button
   m_TagString: Button
@@ -4368,6 +4410,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7016897, y: 0.2489056}
   m_EdgeRadius: 0
+--- !u!114 &1895264103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895264098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8877b9104af46e34d9287ff5defe5831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_GroundCheck: {fileID: 1182249863}
+  m_CeilingCheck: {fileID: 342044203}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  Xpos: 0
+  Ypos: 0
+  player: {fileID: 131947293}
+  nasa: {fileID: 2125205411}
+  nasa2: {fileID: 873105759}
+  nasa3: {fileID: 1581930531}
+  nasa4: {fileID: 2005395834}
 --- !u!1 &2005395834
 GameObject:
   m_ObjectHideFlags: 0
