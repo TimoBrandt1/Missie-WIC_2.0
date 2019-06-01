@@ -5,18 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class buttonClick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            SceneManager.LoadScene("Tutorial");
-        }
+        SceneManager.LoadScene("Tutorial");
     }
 }
