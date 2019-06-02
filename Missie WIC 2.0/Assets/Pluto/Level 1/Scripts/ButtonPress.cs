@@ -10,7 +10,7 @@ public class ButtonPress : MonoBehaviour
     public GameObject nasa3;
     public GameObject nasa4;
     //private bool facingRight;
-    private bool Test = true;
+    public bool Test = true;
     private void Update()
     {
        /* if (Input.GetKeyDown(KeyCode.A))
