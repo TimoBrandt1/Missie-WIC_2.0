@@ -4530,6 +4530,7 @@ MonoBehaviour:
   nasa2: {fileID: 1242356463}
   nasa3: {fileID: 386400186}
   nasa4: {fileID: 2117121464}
+  rGravity: 1
 --- !u!61 &1593032272
 BoxCollider2D:
   m_ObjectHideFlags: 0

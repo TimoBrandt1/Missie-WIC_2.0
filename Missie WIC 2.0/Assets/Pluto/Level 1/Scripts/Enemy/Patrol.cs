@@ -18,11 +18,11 @@ public class Patrol : MonoBehaviour
         moveingRight = true;
         //direction = Vector2.right;
         agent = gameObject.GetComponent<NavMeshAgent>();
-        Reversed = gameObject.GetComponent<ButtonPress>().Test;
+        Reversed = GameObject.Find("button").GetComponent<ButtonPress>().Test;
     }
     void Update()
     {
-        if (Reversed == false)
+        if (  == false)
         {
             Xpos = 180;
         }
