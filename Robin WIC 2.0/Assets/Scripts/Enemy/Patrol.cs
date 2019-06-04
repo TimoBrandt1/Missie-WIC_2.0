@@ -6,17 +6,19 @@ public class Patrol : MonoBehaviour
 {
     public Transform pos1;
     public Transform pos2;
+    public int Xpos;
     public float speed;
-    private bool moveingRight;
+    private bool movingRight;
     private NavMeshAgent agent;
     private void Start()
     {
-        moveingRight = true;
+        Xpos = 0;
+        movingRight = true;
         agent = gameObject.GetComponent<NavMeshAgent>();
     }
     private void Update()
     {
-        if (moveingRight == true)
+        if (movingRight == true)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
@@ -26,7 +28,7 @@ public class Patrol : MonoBehaviour
         if (other.gameObject.tag == "1")
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
-            moveingRight = true;
+            movingRight = true;
         }
         if (other.gameObject.tag == "2")
         {
