@@ -14,7 +14,6 @@ public class Patrol : MonoBehaviour
     //Vector2 direction;
     private void Start()
     {
-        Xpos = 0;
         movingRight = true;
         //direction = Vector2.right;
         agent = gameObject.GetComponent<NavMeshAgent>();
@@ -22,9 +21,17 @@ public class Patrol : MonoBehaviour
     }
     void Update()
     {
+        if (Reversed == true)
+        {
+            Xpos -= 180;
+        }
+        if (Reversed == false)
+        {
+            Xpos -= 180;
+        }
         if (movingRight  == false)
         {
-            Xpos = 180;
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
         if (movingRight == true)
         {
