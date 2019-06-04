@@ -22,7 +22,7 @@ public class Patrol : MonoBehaviour
     }
     void Update()
     {
-        if (  == false)
+        //if (  == false)
         {
             Xpos = 180;
         }
