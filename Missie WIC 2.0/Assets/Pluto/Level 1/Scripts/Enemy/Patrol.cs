@@ -21,14 +21,6 @@ public class Patrol : MonoBehaviour
     }
     void Update()
     {
-        if (Reversed == true)
-        {
-            Xpos -= 180;
-        }
-        if (Reversed == false)
-        {
-            Xpos -= 180;
-        }
         if (movingRight  == false)
         {
             transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -42,6 +34,11 @@ public class Patrol : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (Reversed == true)
+        {
+            Xpos -= 180;
+        }
+
         //direction = -direction;
         if (other.gameObject.tag == "1")
         {
