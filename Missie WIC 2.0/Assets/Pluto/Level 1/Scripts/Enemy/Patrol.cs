@@ -36,7 +36,7 @@ public class Patrol : MonoBehaviour
     {
         if (Reversed == true)
         {
-            Xpos -= 180;
+            Xpos += 180;
         }
 
         //direction = -direction;
