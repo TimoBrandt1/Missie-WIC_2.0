@@ -17,6 +17,7 @@ public class NasaAnimation : MonoBehaviour
         if (SpottedAlienWithLight == true)
         {
             gameObject.GetComponent<Patrol>().enabled = false;
+            gameObject.GetComponent<PatrolTutorial>().enabled = false;
             animator.SetBool("SpottedAlien", true);
         }
         if (SpottedAlienWithLight == false)

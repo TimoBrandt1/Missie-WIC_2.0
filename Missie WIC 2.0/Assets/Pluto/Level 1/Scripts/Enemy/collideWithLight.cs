@@ -27,6 +27,7 @@ public class collideWithLight : MonoBehaviour
             GameObject.Find("Player").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             gameObject.GetComponent<NasaAnimation>().SpottedAlienWithLight = true;
             gameObject.GetComponent<Patrol>().enabled = false;
+            gameObject.GetComponent<PatrolTutorial>().enabled = false;
 
             StartCoroutine(Timer());
         }
