@@ -16,7 +16,6 @@ public class PatrolTutorial : MonoBehaviour
         Xpos = 0;
         movingRight = true;
         //direction = Vector2.right;
-        Reversed = GameObject.Find("button").GetComponent<ButtonPress>().Test;
     }
     void Update()
     {
