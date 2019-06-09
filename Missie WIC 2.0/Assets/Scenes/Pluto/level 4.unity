@@ -3018,6 +3018,7 @@ GameObject:
   - component: {fileID: 836423547}
   - component: {fileID: 836423546}
   - component: {fileID: 836423545}
+  - component: {fileID: 836423548}
   m_Layer: 0
   m_Name: button (1)
   m_TagString: Button
@@ -3152,11 +3153,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 417961224}
-  nasa: {fileID: 1421924188}
-  nasa2: {fileID: 82305412}
-  nasa3: {fileID: 0}
-  nasa4: {fileID: 0}
+  nasa1:
+  - {fileID: 1421924188}
+  - {fileID: 82305412}
   Test: 1
+--- !u!50 &836423548
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836423542}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &845065762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3922,6 +3943,7 @@ GameObject:
   - component: {fileID: 1270957876}
   - component: {fileID: 1270957875}
   - component: {fileID: 1270957874}
+  - component: {fileID: 1270957878}
   m_Layer: 0
   m_Name: button
   m_TagString: Button
@@ -4008,10 +4030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 417961224}
-  nasa: {fileID: 1421924188}
-  nasa2: {fileID: 82305412}
-  nasa3: {fileID: 0}
-  nasa4: {fileID: 0}
+  nasa1: []
   Test: 1
 --- !u!212 &1270957877
 SpriteRenderer:
@@ -4061,6 +4080,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1270957878
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270957872}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1281682998
 GameObject:
   m_ObjectHideFlags: 0

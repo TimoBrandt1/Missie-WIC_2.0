@@ -6,12 +6,12 @@ public class ButtonPress : MonoBehaviour
     private int posX = 0;
     public GameObject player;
     public GameObject[] nasa1;
-    public GameObject nasa;
-    public GameObject nasa2;
-    public GameObject nasa3;
-    public GameObject nasa4;
+    //public GameObject nasa;
+    //public GameObject nasa2;
+    //public GameObject nasa3;
+    //public GameObject nasa4;
     //private bool facingRight;
-    public bool Test = false;
+    public bool Test = true;
     private void Update()
     {
         /* if (Input.GetKeyDown(KeyCode.A))
@@ -33,33 +33,29 @@ public class ButtonPress : MonoBehaviour
     }
     IEnumerator Waitforbutton()
     {
-        yield return new WaitForSeconds(5);
-        Test = false;
+        yield return new WaitForSeconds(2);
+        Test = true;
     }
         
     private void OnTriggerEnter2D(Collider2D collision)
     { 
-        if (collision.gameObject.tag == "Player" && Test == false)
+        if (collision.gameObject.tag == "Player" && Test == true)
         {
             posX -= 180;
             player.transform.Rotate(posX, 0, 0);
-            nasa.transform.Rotate(posX, 0, 0);
-            nasa2.transform.Rotate(posX, 0, 0);
-            nasa3.transform.Rotate(posX, 0, 0);
-            nasa4.transform.Rotate(posX, 0, 0);
             player.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-            nasa.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-            nasa2.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-            nasa3.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-            nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
             player.GetComponent<CharacterController2D>().m_JumpForce *= -1;
-
-            Test = true;
+            foreach (var nasa in nasa1)
+            {
+                transform.Rotate(posX, 0, 0);
+                gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+            }
+            Test = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Test == true)
+        if (collision.gameObject.tag == "Player" && Test == false)
         {
             StartCoroutine(Waitforbutton());
         }
