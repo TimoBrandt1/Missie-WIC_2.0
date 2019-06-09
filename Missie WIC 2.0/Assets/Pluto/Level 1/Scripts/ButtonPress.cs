@@ -5,12 +5,13 @@ public class ButtonPress : MonoBehaviour
 {
     private int posX = 0;
     public GameObject player;
+    public GameObject[] nasa1;
     public GameObject nasa;
     public GameObject nasa2;
     public GameObject nasa3;
     public GameObject nasa4;
     //private bool facingRight;
-    public bool Test = true;
+    public bool Test = false;
     private void Update()
     {
         /* if (Input.GetKeyDown(KeyCode.A))
@@ -32,15 +33,15 @@ public class ButtonPress : MonoBehaviour
     }
     IEnumerator Waitforbutton()
     {
-        yield return new WaitForSeconds(2);
-        Test = true;
+        yield return new WaitForSeconds(5);
+        Test = false;
     }
         
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     { 
-        if (collision.gameObject.tag == "Player" && Test == true)
+        if (collision.gameObject.tag == "Player" && Test == false)
         {
-            posX = 180;
+            posX -= 180;
             player.transform.Rotate(posX, 0, 0);
             nasa.transform.Rotate(posX, 0, 0);
             nasa2.transform.Rotate(posX, 0, 0);
@@ -53,15 +54,14 @@ public class ButtonPress : MonoBehaviour
             nasa4.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
             player.GetComponent<CharacterController2D>().m_JumpForce *= -1;
 
-            Test = false;
+            Test = true;
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Test == false)
+        if (collision.gameObject.tag == "Player" && Test == true)
         {
-             StartCoroutine(Waitforbutton());
+            StartCoroutine(Waitforbutton());
         }
-    }
-    
+    } 
 }
