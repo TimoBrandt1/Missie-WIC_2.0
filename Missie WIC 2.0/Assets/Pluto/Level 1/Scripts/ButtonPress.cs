@@ -41,15 +41,15 @@ public class ButtonPress : MonoBehaviour
     { 
         if (collision.gameObject.tag == "Player" && Test == true)
         {
-            posX -= 180;
+            posX += 180;
+            foreach (var nasa in nasa1)
+            {
+                nasa.transform.Rotate(posX, 0, 0);
+                nasa.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
+            }
             player.transform.Rotate(posX, 0, 0);
             player.gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
             player.GetComponent<CharacterController2D>().m_JumpForce *= -1;
-            foreach (var nasa in nasa1)
-            {
-                transform.Rotate(posX, 0, 0);
-                gameObject.GetComponent<Rigidbody2D>().gravityScale *= -1;
-            }
             Test = false;
         }
     }

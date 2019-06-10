@@ -306,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61813668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 737628822}
@@ -2873,10 +2873,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 918411515}
   nasa1: []
-  nasa: {fileID: 1909909519}
-  nasa2: {fileID: 395670980}
-  nasa3: {fileID: 0}
-  nasa4: {fileID: 0}
   Test: 1
 --- !u!212 &1614871543
 SpriteRenderer:

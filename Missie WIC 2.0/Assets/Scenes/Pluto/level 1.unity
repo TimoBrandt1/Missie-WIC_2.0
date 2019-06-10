@@ -1471,6 +1471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 450472578}
   - component: {fileID: 450472579}
+  - component: {fileID: 450472580}
   m_Layer: 0
   m_Name: button
   m_TagString: Button
@@ -1540,6 +1541,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &450472580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450472577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8877b9104af46e34d9287ff5defe5831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 969231284}
+  nasa1:
+  - {fileID: 338541169}
+  - {fileID: 1384119624}
+  Test: 1
 --- !u!1 &491990001
 GameObject:
   m_ObjectHideFlags: 0
