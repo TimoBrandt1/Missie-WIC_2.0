@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class starPickup : MonoBehaviour
 {
+    public int StarsCollected;
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
@@ -18,16 +19,22 @@ public class starPickup : MonoBehaviour
         {
             Destroy(star1);
             Instantiate(Star1Prefab);
+            StarsCollected++;
+            Debug.Log(StarsCollected);
         }
         if (collision.gameObject.name == "Star2")
         {
             Destroy(star2);
             Instantiate(Star2Prefab);
+            StarsCollected++;
+            Debug.Log(StarsCollected);
         }
         if (collision.gameObject.name == "Star3")
         {
             Destroy(star3);
             Instantiate(Star3Prefab);
+            StarsCollected++;
+            Debug.Log(StarsCollected);
         }
     }
 }
