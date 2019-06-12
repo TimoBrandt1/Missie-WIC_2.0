@@ -5,12 +5,8 @@ using UnityEngine;
 public class PortalHandeler : MonoBehaviour
 {
     public Animator animator;
-    public int starsCollectedForPortal; 
+    public int starsCollectedForPortal;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -20,7 +16,7 @@ public class PortalHandeler : MonoBehaviour
         {
             animator.SetBool("AllStarsCollected", true);
             StartCoroutine(Timer());
-            Debug.Log("Test");
+            GameObject.Find("EndPortal").GetComponent<PortalToNextLevel>().PortalClosed = false;
         }
     }
     IEnumerator Timer()
