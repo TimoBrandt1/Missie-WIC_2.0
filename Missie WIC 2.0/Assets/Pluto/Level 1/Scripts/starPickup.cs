@@ -36,4 +36,11 @@ public class starPickup : MonoBehaviour
             Debug.Log(StarsCollected);
         }
     }
+    private void Update()
+    {
+        if (StarsCollected >= 3)
+        {
+            StarsCollected = 3;
+        }
+    }
 }

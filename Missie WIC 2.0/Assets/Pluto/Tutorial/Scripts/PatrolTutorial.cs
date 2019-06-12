@@ -8,7 +8,6 @@ public class PatrolTutorial : MonoBehaviour
     public Transform pos2;
     public float speed;
     private bool movingRight;
-    private bool Reversed;
     private int Xpos;
     //Vector2 direction;
     private void Start()

@@ -4,17 +4,15 @@ using UnityEngine.AI;
 
 public class Patrol : MonoBehaviour
 {
-    public Transform pos1;
-    public Transform pos2;
+    public Transform Pos1;
+    public Transform Pos2;
     public float speed;
     private bool movingRight;
     private bool Reversed;
-    private NavMeshAgent agent;
     private int Xpos;
     private void Start()
     {
         movingRight = true;
-        agent = gameObject.GetComponent<NavMeshAgent>();
         Reversed = GameObject.Find("button").GetComponent<ButtonPress>().Test;
     }
     void Update()
@@ -34,12 +32,12 @@ public class Patrol : MonoBehaviour
     {
         if (other.gameObject.tag == "1")
         {
-            transform.eulerAngles = new Vector3(Xpos, 0, 0);
+            transform.Rotate(Xpos, 0, 0);
             movingRight = true;
         }
         if (other.gameObject.tag == "2")
         {
-            transform.eulerAngles = new Vector3(Xpos, -180, 0);
+            transform.Rotate(Xpos, -180, 0);
         }
     }
 }
