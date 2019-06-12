@@ -11,7 +11,6 @@ public class starPickup : MonoBehaviour
     public GameObject Star1Prefab;
     public GameObject Star2Prefab;
     public GameObject Star3Prefab;
-    // Start is called before the first frame update
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

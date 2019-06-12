@@ -11,6 +11,7 @@ TagManager:
   - MaxFollowPos
   - Gun
   - Bullet
+  - EndPortal
   layers:
   - Default
   - TransparentFX
