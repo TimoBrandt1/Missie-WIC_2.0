@@ -4,44 +4,37 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject[] popUps;
-
-    private int popUpIndex;
+    public GameObject TutorialMenuUI;
+    private bool AbleToStart;
     public GameObject player;
 
-   void Update()
+    public void Start()
     {
-        for (int i = 0; i < popUps.Length; i++)
+        Time.timeScale = 0.4f;
+        
+        
+        TutorialMenuUI.SetActive(true);
+        StartCoroutine(Timer());
+    }
+   public void Update()
+    {
+        if (AbleToStart == false)
         {
-            if (i ==  popUpIndex)
-            {
-                popUps[popUpIndex].SetActive(true);
-            }
-            else
-            {
-                popUps[popUpIndex].SetActive(false);
-            }
-        }
-        if (popUpIndex == 0)
-        {
-            //Sets the jump force of the player to 0 so you can only move left and right
             player.GetComponent<CharacterController2D>().m_JumpForce = 0;
-            //Checks if you have pressed the left or right buttons
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                popUpIndex++;
-            }
-            
+            player.GetComponent<PlayerMovement>().runSpeed = 0;
         }
-        else if (popUpIndex == 1)
+
+        if (Input.GetKeyDown(KeyCode.Space) && AbleToStart == true)
         {
-            //Sets the jump force back to normal
             player.GetComponent<CharacterController2D>().m_JumpForce = 525;
-            //Checks if the player has pressed the jump button
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                popUpIndex++;
-            }
+            player.GetComponent<PlayerMovement>().runSpeed = 20;
+            TutorialMenuUI.SetActive(false);
+            Time.timeScale = 1f;
         }
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(4);
+        AbleToStart = true;
     }
 }
