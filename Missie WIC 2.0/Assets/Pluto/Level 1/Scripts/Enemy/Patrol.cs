@@ -4,8 +4,6 @@ using UnityEngine.AI;
 
 public class Patrol : MonoBehaviour
 {
-    public Transform Pos1;
-    public Transform Pos2;
     public float speed;
     private bool movingRight;
     private bool Reversed;

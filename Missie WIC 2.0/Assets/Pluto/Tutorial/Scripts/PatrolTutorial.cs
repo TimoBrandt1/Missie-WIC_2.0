@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PatrolTutorial : MonoBehaviour
 {
-    public Transform pos1;
-    public Transform pos2;
     public float speed;
     private bool movingRight;
     private int Xpos;
