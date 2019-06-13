@@ -40,10 +40,10 @@ public class PortalToNextLevel : MonoBehaviour
                 SceneManager.LoadScene("level 5");
             }
             //From Level 5 to level 6
-            if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 5"))
+            /*if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 5"))
             {
                 SceneManager.LoadScene("level 6");
-            }
+            }*/
         }
 
     }

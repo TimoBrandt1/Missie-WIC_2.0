@@ -11,6 +11,8 @@ TagManager:
   - MaxFollowPos
   - Gun
   - Bullet
+  - 3
+  - 4
   layers:
   - Default
   - TransparentFX

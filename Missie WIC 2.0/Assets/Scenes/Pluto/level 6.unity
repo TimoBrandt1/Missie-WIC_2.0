@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 19899290}
   m_Layer: 0
   m_Name: rightPos
-  m_TagString: 2
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 122971534}
   m_Layer: 0
   m_Name: rightPos
-  m_TagString: 2
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 472277096}
   m_Layer: 0
   m_Name: leftPos
-  m_TagString: 1
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 556164910}
   m_Layer: 0
   m_Name: leftPos
-  m_TagString: 1
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1526,7 +1526,7 @@ GameObject:
   - component: {fileID: 658796338}
   m_Layer: 0
   m_Name: rightPos
-  m_TagString: 2
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 867592284}
   m_Layer: 0
   m_Name: rightPos
-  m_TagString: 2
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2505,8 +2505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f058d9b56289a6444891865425d2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 778752439}
-  pos2: {fileID: 1740000364}
   speed: 1
 --- !u!114 &952232538
 MonoBehaviour:
@@ -2770,8 +2768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {fileID: 0}
-  Pos2: {fileID: 0}
   speed: 1
 --- !u!114 &952232548
 MonoBehaviour:
@@ -3985,7 +3981,7 @@ GameObject:
   - component: {fileID: 1558450529}
   m_Layer: 0
   m_Name: rightPos
-  m_TagString: 2
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4654,7 +4650,7 @@ GameObject:
   - component: {fileID: 1771176124}
   m_Layer: 0
   m_Name: leftPos
-  m_TagString: 1
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5104,7 +5100,7 @@ GameObject:
   - component: {fileID: 1953390814}
   m_Layer: 0
   m_Name: leftPos
-  m_TagString: 1
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5349,7 +5345,7 @@ GameObject:
   - component: {fileID: 2128418773}
   m_Layer: 0
   m_Name: leftPos
-  m_TagString: 1
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

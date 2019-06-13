@@ -15,13 +15,13 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
             Ammo--;
-            GameObject.Find("InstantiateGameObjects").GetComponent<AmmoBar>().ammo--;
+            //GameObject.Find("InstantiateGameObjects").GetComponent<AmmoBar>().ammo--;
         }
 
     }
 
     void Shoot()
     {
-        Instantiate(bulletPrebaf, firePoint.position, firePoint.rotation);
+        //Instantiate(bulletPrebaf, firePoint.position, firePoint.rotation);
     }
 }
