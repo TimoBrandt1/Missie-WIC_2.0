@@ -1795,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posX: 0
+  pressSound: {fileID: 8300000, guid: a5d779a436c08634d9550353adc6be91, type: 3}
   player: {fileID: 1272186022}
   nasa1:
   - {fileID: 900673102}
@@ -1952,8 +1953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f058d9b56289a6444891865425d2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 24791709}
-  pos2: {fileID: 1127439267}
   speed: 1
 --- !u!114 &900673105
 MonoBehaviour:
@@ -2217,8 +2216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {fileID: 0}
-  Pos2: {fileID: 0}
   speed: 1
 --- !u!114 &900673115
 MonoBehaviour:
@@ -4186,8 +4183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f058d9b56289a6444891865425d2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 24791709}
-  pos2: {fileID: 1127439267}
   speed: 2
 --- !u!114 &2017192116
 MonoBehaviour:
@@ -4451,8 +4446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {fileID: 0}
-  Pos2: {fileID: 0}
   speed: 1
 --- !u!114 &2017192126
 MonoBehaviour:

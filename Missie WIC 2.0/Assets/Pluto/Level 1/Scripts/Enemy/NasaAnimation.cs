@@ -5,12 +5,11 @@ using UnityEngine;
 public class NasaAnimation : MonoBehaviour
 {
     public Animator animator;
-
     public bool SpottedAlienWithLight = false;
     // Update is called once per frame
     void Update()
     {
-        CheckSpottedAlien();
+        CheckSpottedAlien();  
     }
     public void CheckSpottedAlien()
     {

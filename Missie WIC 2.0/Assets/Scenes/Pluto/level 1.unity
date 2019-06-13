@@ -569,8 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {fileID: 0}
-  Pos2: {fileID: 0}
   speed: 1
 --- !u!114 &338541181
 MonoBehaviour:
@@ -610,8 +608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f058d9b56289a6444891865425d2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1480682890}
-  pos2: {fileID: 869063899}
   speed: 1
 --- !u!1 &368941210
 GameObject:
@@ -1094,6 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posX: 0
+  pressSound: {fileID: 8300000, guid: a5d779a436c08634d9550353adc6be91, type: 3}
   player: {fileID: 969231284}
   nasa1:
   - {fileID: 338541169}
@@ -2631,8 +2628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f058d9b56289a6444891865425d2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1480682890}
-  pos2: {fileID: 869063899}
   speed: 1
 --- !u!114 &1347118241
 MonoBehaviour:
@@ -2896,8 +2891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {fileID: 0}
-  Pos2: {fileID: 0}
   speed: 1
 --- !u!114 &1347118251
 MonoBehaviour:
@@ -3230,8 +3223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {fileID: 0}
-  Pos2: {fileID: 0}
   speed: 1
 --- !u!114 &1384119636
 MonoBehaviour:
@@ -3271,8 +3262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f058d9b56289a6444891865425d2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1480682890}
-  pos2: {fileID: 869063899}
   speed: 1
 --- !u!1 &1415332537
 GameObject:
@@ -4839,8 +4828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f058d9b56289a6444891865425d2221b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {fileID: 1480682890}
-  pos2: {fileID: 869063899}
   speed: 1
 --- !u!114 &2029936169
 MonoBehaviour:
@@ -5104,8 +5091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70377eca1bd6a042ae96b27ce1e5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {fileID: 0}
-  Pos2: {fileID: 0}
   speed: 1
 --- !u!114 &2029936179
 MonoBehaviour:
