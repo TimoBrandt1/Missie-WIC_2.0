@@ -8,24 +8,13 @@ public class ButtonPress : MonoBehaviour
     public GameObject player;
     public GameObject[] nasa1;
     public bool Test = true;
-    public AudioClip buttonPress;
-    public AudioSource ButtonPressSource;
-
     IEnumerator Waitforbutton()
     {
         yield return new WaitForSeconds(2);
         Test = true;
     }
-    private void Start()
-    {
-        ButtonPressSource.clip = buttonPress;
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            ButtonPressSource.Play();
-        }
         if (collision.gameObject.tag == "Player" && Test == true)
         {
             posX = 180;
