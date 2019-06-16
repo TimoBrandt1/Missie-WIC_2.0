@@ -1,25 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class buttonSpawn : MonoBehaviour
 {
-    public GameObject StartButtonPrefab;
-    private GameObject StartButton;
-
-    public GameObject PanelButtonParent;
-
-    public Transform ButtonSpawnPos;
+    public GameObject StartText;
+    public bool AbleToStart;
     // Start is called before the first frame update
     void Start()
     {
-        StartButton = Instantiate(StartButtonPrefab, ButtonSpawnPos.position, ButtonSpawnPos.rotation);
         StartCoroutine(WaitForIntro());
     }
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && AbleToStart == true)
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
+    }
     IEnumerator WaitForIntro()
     {
         yield return new WaitForSeconds(4);
-        StartButton.transform.SetParent(PanelButtonParent.transform);
+        Instantiate(StartText);
+        AbleToStart = true;
     }
 }
