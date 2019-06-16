@@ -49,4 +49,49 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quiting The Game");
         Application.Quit();
     }
+    public void RestartLevel()
+    {
+        //Restart Tutorial
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Tutorial"))
+        {
+            SceneManager.LoadScene("Tutorial");
+            Resume();
+        }
+        //Restart level 1
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 1"))
+        {
+            SceneManager.LoadScene("level 1");
+            Resume();
+        }
+        //Restart level 2
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 2"))
+        {
+            SceneManager.LoadScene("level 2");
+            Resume();
+        }
+        //Restart level 3
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 3"))
+        {
+            SceneManager.LoadScene("level 3");
+            Resume();
+        }
+        //Restart level 4
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 4"))
+        {
+            SceneManager.LoadScene("level 4");
+            Resume();
+        }
+        //Restart level 5
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 5"))
+        {
+            SceneManager.LoadScene("level 5");
+            Resume();
+        }
+        //Restart level 6
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 6"))
+        {
+            SceneManager.LoadScene("level 6");
+            Resume();
+        }
+    }
 }
