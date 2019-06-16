@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class collideWithLight : MonoBehaviour
 {
+    public AudioClip alert;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class collideWithLight : MonoBehaviour
     {
         if (col.gameObject.name == "Player")
         {
+            SoundManager.instance.PlaySingle(alert);
             //Activate follow Script
             //gameObject.GetComponent<EnemyFollow>().enabled = true;
             GameObject.Find("Player").GetComponent<PlayerMovement>().seen = true;
