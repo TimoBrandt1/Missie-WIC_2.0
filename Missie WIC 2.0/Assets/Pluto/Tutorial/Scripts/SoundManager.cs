@@ -15,8 +15,6 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        currentScene = SceneManager.GetActiveScene();
-        currentSceneName = currentScene.name;
         if (instance == null)
         {
             instance = this;
@@ -28,7 +26,8 @@ public class SoundManager : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(currentSceneName);
+        currentScene = SceneManager.GetActiveScene();
+        currentSceneName = currentScene.name;
         if (currentSceneName != "GameOver")
         {
             DontDestroyOnLoad(gameObject);
