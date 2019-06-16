@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-[RequireComponent(typeof(AudioSource))]
+
 public class ButtonPress : MonoBehaviour
 {
+    public AudioClip buttonPress;
     public int posX = 0;
     public GameObject player;
     public GameObject[] nasa1;
@@ -17,6 +18,7 @@ public class ButtonPress : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && Test == true)
         {
+            SoundManager.instance.PlaySingle(buttonPress);
             posX = 180;
             foreach (var nasa in nasa1)
             {
