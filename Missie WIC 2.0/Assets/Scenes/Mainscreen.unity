@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccd1508b4e480c4786757fd30120d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartButtonPrefab: {fileID: 3820393610185285428, guid: 556689cfe83cdf745ad1ca5212231c05,
+  StartButtonPrefab: {fileID: 8117122133565324599, guid: 550387e6e686707458e22844c3801fd3,
     type: 3}
   PanelButtonParent: {fileID: 895028013}
   ButtonSpawnPos: {fileID: 1243936588}
@@ -410,8 +410,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -276.3}
+  m_SizeDelta: {x: -485.4, y: -552.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895028015
 MonoBehaviour:
@@ -480,10 +480,10 @@ RectTransform:
   m_Father: {fileID: 895028014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 120}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 98.5}
+  m_SizeDelta: {x: -216, y: 197}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1602215258
 GameObject:
