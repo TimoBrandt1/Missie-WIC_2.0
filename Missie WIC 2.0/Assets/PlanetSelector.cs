@@ -18,21 +18,26 @@ public class PlanetSelector : MonoBehaviour
     public bool MercurySelected;
     void Update()
     {
+        Debug.Log(planetCounter);
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            planetCounter++;
+            planetCounter =+ 1;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            planetCounter++;
+            planetCounter =+ 1;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            planetCounter--;
+            planetCounter =- 1;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            planetCounter--;
+            planetCounter =- 1;
+        }
+        if (planetCounter <= 0)
+        {
+            planetCounter = 0;
         }
         CheckCounter();
         CheckPlanet();
@@ -86,13 +91,37 @@ public class PlanetSelector : MonoBehaviour
         {
             planets = "Neptune";
         }
-        //Uranus
-        //Saturnus
-        //Jupiter
-        //Mars
-        //Maan
-        //Aarde
-        //Venus
-        //Mercurius
+        if (planetCounter == 3)
+        {
+            planets = "Uranus";
+        }
+        if (planetCounter == 4)
+        {
+            planets = "Saturn";
+        }
+        if (planetCounter == 5)
+        {
+            planets = "Jupiter";
+        }
+        if (planetCounter == 6)
+        {
+            planets = "Mars";
+        }
+        if (planetCounter == 7)
+        {
+            planets = "Moon";
+        }
+        if (planetCounter == 8)
+        {
+            planets = "Earth";
+        }
+        if (planetCounter == 9)
+        {
+            planets = "Venus";
+        }
+        if (planetCounter == 10)
+        {
+            planets = "Mercury";
+        }
     }
 }

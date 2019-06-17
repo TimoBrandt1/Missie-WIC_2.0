@@ -312,6 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921704182}
   - component: {fileID: 1921704181}
+  - component: {fileID: 1921704183}
   m_Layer: 0
   m_Name: Scriptholder
   m_TagString: Untagged
@@ -331,6 +332,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c160b0ed11fcbcc48bbc9f7ecac8e2d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlutoSelected: 0
+  NeptuneSelected: 0
+  UranusSelected: 0
+  SaturnSelected: 0
+  JupiterSelected: 0
+  MarsSelected: 0
+  MoonSelected: 0
+  EarthSelected: 0
+  VenusSelected: 0
+  MercurySelected: 0
 --- !u!4 &1921704182
 Transform:
   m_ObjectHideFlags: 0
@@ -345,3 +356,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921704183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921704180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f6d316594e636439c9e7fa653f34bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plutoSelected: 0
+  neptuneSelected: 0
+  uranusSelected: 0
+  saturnSelected: 0
+  jupiterSelected: 0
+  marsSelected: 0
+  moonSelected: 0
+  earthSelected: 0
+  venusSelected: 0
+  mercurySelected: 0
