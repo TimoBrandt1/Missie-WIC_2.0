@@ -20,6 +20,7 @@ public class starPickup : MonoBehaviour
             Instantiate(Star1Prefab);
             StarsCollected++;
             Debug.Log(StarsCollected);
+            GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
         }
         if (collision.gameObject.name == "Star2")
         {
@@ -27,6 +28,7 @@ public class starPickup : MonoBehaviour
             Instantiate(Star2Prefab);
             StarsCollected++;
             Debug.Log(StarsCollected);
+            GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
         }
         if (collision.gameObject.name == "Star3")
         {
@@ -34,6 +36,7 @@ public class starPickup : MonoBehaviour
             Instantiate(Star3Prefab);
             StarsCollected++;
             Debug.Log(StarsCollected);
+            GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
         }
     }
     private void Update()
