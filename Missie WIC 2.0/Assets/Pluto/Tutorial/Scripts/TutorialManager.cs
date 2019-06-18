@@ -80,7 +80,7 @@ public class TutorialManager : MonoBehaviour
         //Go in the portal
         else if (PopUpIndex == 5)
         {
-            Debug.Log(PopUpIndex);
+
         }
     }
     IEnumerator Timer()

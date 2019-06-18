@@ -1,60 +1,67 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelection : MonoBehaviour
 {
-    public int levelCounter;
-    public string level;
+    public int levelCounter = 0;
     public Animator animator;
-
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        Debug.Log(levelCounter);
+        if (Input.GetKeyUp(KeyCode.RightArrow))
         {
-            levelCounter =+ 1;
+            levelCounter++;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.D))
         {
-            levelCounter =+ 1;
+            levelCounter++;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.A))
         {
-            levelCounter =- 1;
+            levelCounter--;
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            levelCounter =- 1;
+            levelCounter--;
         }
-        CheckCounter();
+        LoadSelectedLevel();
+        //CheckCounter();
     }
-
-    void CheckCounter()
+    void LoadSelectedLevel()
     {
-        if (levelCounter == 1)
+        if (levelCounter == 0 && Input.GetKey(KeyCode.Return))
         {
-            animator.SetInteger("New Int", 1);
+            SceneManager.LoadScene("Tutorial");
         }
-        if (levelCounter == 1)
+        if (levelCounter == 1 && Input.GetKey(KeyCode.Return))
         {
-            animator.SetInteger("New Int", 2);
+            SceneManager.LoadScene("level 1");
         }
-        if (levelCounter == 1)
+        if (levelCounter == 2 && Input.GetKey(KeyCode.Return))
         {
-            animator.SetInteger("New Int", 3);
+            SceneManager.LoadScene("level 2");
         }
-        if (levelCounter == 1)
+        if (levelCounter == 3 && Input.GetKey(KeyCode.Return))
         {
-            animator.SetInteger("New Int", 4);
+            SceneManager.LoadScene("level 3");
         }
-        if (levelCounter == 1)
+        if (levelCounter == 4 && Input.GetKey(KeyCode.Return))
         {
-            animator.SetInteger("New Int", 5);
+            SceneManager.LoadScene("level 4");
         }
-        if (levelCounter == 1)
+        if (levelCounter == 5 && Input.GetKey(KeyCode.Return))
         {
-            animator.SetInteger("New Int", 6);
+            SceneManager.LoadScene("level 5");
+        }
+        if (levelCounter == 6 && Input.GetKey(KeyCode.Return))
+        {
+            SceneManager.LoadScene("level 7(Demo)");
         }
     }
+    /*void CheckCounter()
+    {
+    }*/
 }

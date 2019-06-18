@@ -10,7 +10,6 @@ public class LevelSelectionProgress : MonoBehaviour
     private void Update()
     {
         stage = PlayerPrefs.GetInt("stage");
-        Debug.Log(stage);
         if (stage == 1)
         {
             animator.SetBool("SecondLevelUnlocked", true);

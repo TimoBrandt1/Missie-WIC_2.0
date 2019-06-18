@@ -1396,6 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PortalClosed: 1
+  stageCounter: 0
 --- !u!95 &719790410
 Animator:
   serializedVersion: 3
@@ -5074,3 +5075,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  stage: 0
