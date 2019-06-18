@@ -16,7 +16,7 @@ public class buttonSpawn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && AbleToStart == true)
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("PlanetSelection");
         }
     }
     IEnumerator WaitForIntro()

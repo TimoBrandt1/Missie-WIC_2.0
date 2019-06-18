@@ -9,25 +9,28 @@ EditorBuildSettings:
     path: Assets/Scenes/Mainscreen.unity
     guid: b47859c476ac27b4386c121447d473e3
   - enabled: 1
-    path: Assets/Scenes/Pluto/Tutorial.unity
+    path: Assets/Scenes/PlanetSelection.unity
+    guid: 8785e2e6a3fe19f43bf5c2f158e9a4c1
+  - enabled: 1
+    path: Assets/Scenes/Pluto/Levels/Tutorial.unity
     guid: 791cd135b097d7d419037f20941ac759
   - enabled: 1
-    path: Assets/Scenes/Pluto/level 1.unity
+    path: Assets/Scenes/Pluto/Levels/level 1.unity
     guid: cef15705b30ec2d488df577bb4caae50
   - enabled: 1
-    path: Assets/Scenes/Pluto/level 2.unity
+    path: Assets/Scenes/Pluto/Levels/level 2.unity
     guid: 1e44536f3418d13439a9abf36d64e178
   - enabled: 1
-    path: Assets/Scenes/Pluto/level 3.unity
+    path: Assets/Scenes/Pluto/Levels/level 3.unity
     guid: 631f158b8ae1afc42b3c4dff2fd62144
   - enabled: 1
-    path: Assets/Scenes/Pluto/level 4.unity
+    path: Assets/Scenes/Pluto/Levels/level 4.unity
     guid: cf17e582966a38142938d183440377a4
   - enabled: 1
-    path: Assets/Scenes/Pluto/level 5.unity
+    path: Assets/Scenes/Pluto/Levels/level 5.unity
     guid: 9e438b468222ac74c8d3de9cf78a2dd0
   - enabled: 1
-    path: Assets/Scenes/Pluto/level 6.unity
+    path: Assets/Scenes/Pluto/Levels/level 6.unity
     guid: b8642e7225efc294d8cdc65e35867514
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
