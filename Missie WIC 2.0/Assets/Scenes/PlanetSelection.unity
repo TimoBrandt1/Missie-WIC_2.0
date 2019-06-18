@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c160b0ed11fcbcc48bbc9f7ecac8e2d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 321982471}
   PlutoSelected: 0
   NeptuneSelected: 0
   UranusSelected: 0

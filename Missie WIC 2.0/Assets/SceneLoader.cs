@@ -29,7 +29,7 @@ public class SceneLoader : MonoBehaviour
         mercurySelected = GameObject.Find("Scriptholder").GetComponent<PlanetSelector>().MercurySelected;
         if (Input.GetKey(KeyCode.Return) && plutoSelected == true)
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("PlutoLevelSelectie");
         }
     }
 }

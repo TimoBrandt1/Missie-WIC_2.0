@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlanetSelector : MonoBehaviour
 {
+    public Animator animator;
     private string planets;
     private int planetCounter = 0;
     public bool PlutoSelected;
@@ -46,6 +47,7 @@ public class PlanetSelector : MonoBehaviour
     {
         if (planets == "Pluto")
         {
+            animator.SetBool("PlutoSelected", true);
             PlutoSelected = true;
         }
         if (planets == "Neptune")
