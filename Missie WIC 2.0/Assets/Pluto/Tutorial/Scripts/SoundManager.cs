@@ -28,11 +28,11 @@ public class SoundManager : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene();
         currentSceneName = currentScene.name;
-        if (currentSceneName != "GameOver")
+        if (currentSceneName != "GameOver" || currentSceneName != "Mainscreen")
         {
             DontDestroyOnLoad(gameObject);
         }
-        if (currentSceneName == "GameOver")
+        if (currentSceneName == "GameOver" || currentSceneName == "Mainscreen")
         {
             Destroy(gameObject);
         }
