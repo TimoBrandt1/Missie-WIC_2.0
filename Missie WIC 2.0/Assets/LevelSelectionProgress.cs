@@ -12,23 +12,23 @@ public class LevelSelectionProgress : MonoBehaviour
         stage = PlayerPrefs.GetInt("stage");
         if (stage == 1)
         {
-            animator.SetBool("SecondLevelUnlocked", true);
+            animator.SetInteger("Level", 1);
         }
         if (stage == 2)
         {
-            animator.SetBool("ThirdLevelUnlocked", true);
+            animator.SetInteger("Level", 2);
         }
         if (stage == 3)
         {
-            animator.SetBool("FourthLevelUnlocked", true);
+            animator.SetInteger("Level", 3);
         }
         if (stage == 4)
         {
-            animator.SetBool("FifthLevelUnlocked", true);
+            animator.SetInteger("Level", 4);
         }
         if (stage == 5)
         {
-            animator.SetBool("AllLevelsUnlocked", true);
+            animator.SetInteger("Level", 5);
         }
     }
 }
