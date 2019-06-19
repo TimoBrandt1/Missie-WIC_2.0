@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class starPickup : MonoBehaviour
 {
@@ -20,7 +21,10 @@ public class starPickup : MonoBehaviour
             Instantiate(Star1Prefab);
             StarsCollected++;
             Debug.Log(StarsCollected);
-            GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Tutorial"))
+            {
+                GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
+            }    
         }
         if (collision.gameObject.name == "Star2")
         {
@@ -28,7 +32,10 @@ public class starPickup : MonoBehaviour
             Instantiate(Star2Prefab);
             StarsCollected++;
             Debug.Log(StarsCollected);
-            GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Tutorial"))
+            {
+                GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
+            }
         }
         if (collision.gameObject.name == "Star3")
         {
@@ -36,7 +43,10 @@ public class starPickup : MonoBehaviour
             Instantiate(Star3Prefab);
             StarsCollected++;
             Debug.Log(StarsCollected);
-            GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Tutorial"))
+            {
+                GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;
+            }
         }
     }
     private void Update()
