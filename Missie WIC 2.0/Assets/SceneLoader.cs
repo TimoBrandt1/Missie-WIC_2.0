@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     void Update()
     {
         plutoSelected = GameObject.Find("Scriptholder").GetComponent<PlanetSelector>().PlutoSelected;
-        if (Input.GetKey(KeyCode.Return) && plutoSelected == true)
+        if (Input.GetKey(KeyCode.Space) && plutoSelected == true)
         {
             SceneManager.LoadScene("PlutoLevelSelectie");
         }

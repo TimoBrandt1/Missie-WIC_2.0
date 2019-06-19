@@ -32,31 +32,31 @@ public class LevelSelection : MonoBehaviour
     }
     void LoadSelectedLevel()
     {
-        if (levelCounter == 0 && Input.GetKey(KeyCode.Return))
+        if (levelCounter == 0 && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("Tutorial");
         }
-        if (levelCounter == 1 && Input.GetKey(KeyCode.Return))
+        if (levelCounter == 1 && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("level 1");
         }
-        if (levelCounter == 2 && Input.GetKey(KeyCode.Return))
+        if (levelCounter == 2 && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("level 2");
         }
-        if (levelCounter == 3 && Input.GetKey(KeyCode.Return))
+        if (levelCounter == 3 && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("level 3");
         }
-        if (levelCounter == 4 && Input.GetKey(KeyCode.Return))
+        if (levelCounter == 4 && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("level 4");
         }
-        if (levelCounter == 5 && Input.GetKey(KeyCode.Return))
+        if (levelCounter == 5 && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("level 5");
         }
-        if (levelCounter == 6 && Input.GetKey(KeyCode.Return))
+        if (levelCounter == 6 && Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("level 7(Demo)");
         }
