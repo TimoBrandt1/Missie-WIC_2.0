@@ -6,12 +6,64 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-
+    public int Selected;
     public GameObject pauseMenuUI;
+    private void Start()
+    {
 
+    }
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Selected);
+        if (Input.GetKeyUp(KeyCode.DownArrow) && GameIsPaused == true || Input.GetKeyUp(KeyCode.S) && GameIsPaused == true)
+        {
+            Selected -= 1;
+        }
+        if (Input.GetKeyUp(KeyCode.UpArrow) && GameIsPaused == true || Input.GetKeyUp(KeyCode.W) && GameIsPaused == true)
+        {
+            Selected += 1;
+        }
+        if (Selected >= 5)
+        {
+            Selected = 1;
+        }
+        if (Selected <= 0)
+        {
+            Selected = 4;
+        }
+        //Contiue button
+        if (Selected == 1)
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                Resume();
+            }
+        }
+        //Restart Button
+        if (Selected == 2)
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                RestartLevel();
+            }
+        }
+        //MainMenu Button
+        if (Selected == 3)
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                LoadMenu();
+            }
+        }
+        //Quit Game
+        if (Selected == 4)
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                QuitGame();
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
