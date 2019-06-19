@@ -35,9 +35,9 @@ public class TutorialManager : MonoBehaviour
         if (PopUpIndex == 0)
         {
             player.GetComponent<CharacterController2D>().m_JumpForce = 0;
-            if (player.transform.position.x > 3)
+            if (player.transform.position.x > 1)
             {
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
                 {
                     PopUpIndex++;
                 }
@@ -49,7 +49,7 @@ public class TutorialManager : MonoBehaviour
             player.GetComponent<CharacterController2D>().m_JumpForce = 525;
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
-                PopUpIndex++;
+                StartCoroutine(WaitFewSeconds());
             }
         }
         //Checks if you collected a star
@@ -75,17 +75,28 @@ public class TutorialManager : MonoBehaviour
             if (Finished == true)
             {
                 PopUpIndex++;
+                Finished = false;
             }
         }
         //Go in the portal
         else if (PopUpIndex == 5)
         {
-
+            StartCoroutine(Wait());
         }
     }
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(5);
         Finished = true;
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5);
+        PopUpIndex++;
+    }
+    IEnumerator WaitFewSeconds()
+    {
+        yield return new WaitForSeconds(1);
+        PopUpIndex++;
     }
 }
