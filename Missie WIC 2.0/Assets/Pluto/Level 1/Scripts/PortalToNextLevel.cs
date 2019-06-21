@@ -9,7 +9,30 @@ public class PortalToNextLevel : MonoBehaviour
     public int stageCounter;
     private void Update()
     {
-        PlayerPrefs.SetInt("stage", stageCounter);
+        if (stageCounter == 1)
+        {
+            PlayerPrefs.SetInt("stage", stageCounter);
+        }
+        if (stageCounter == 2)
+        {
+            PlayerPrefs.SetInt("stage", stageCounter);
+        }
+        if (stageCounter == 3)
+        {
+            PlayerPrefs.SetInt("stage", stageCounter);
+        }
+        if (stageCounter == 4)
+        {
+            PlayerPrefs.SetInt("stage", stageCounter);
+        }
+        if (stageCounter == 5)
+        {
+            PlayerPrefs.SetInt("stage", stageCounter);
+        }
+        if (stageCounter == 6)
+        {
+            PlayerPrefs.SetInt("stage", stageCounter);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -49,6 +72,7 @@ public class PortalToNextLevel : MonoBehaviour
             if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("level 5"))
             {
                 SceneManager.LoadScene("level 7(Demo)");
+                stageCounter += 1;
             }
         }
 

@@ -10,6 +10,7 @@ public class LevelSelectionProgress : MonoBehaviour
     private void Update()
     {
         stage = PlayerPrefs.GetInt("stage");
+        Debug.Log(stage);
         if (stage == 1)
         {
             animator.SetInteger("Level", 1);

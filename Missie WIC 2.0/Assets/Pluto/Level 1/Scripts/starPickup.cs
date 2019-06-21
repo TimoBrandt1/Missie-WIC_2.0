@@ -20,7 +20,6 @@ public class starPickup : MonoBehaviour
             Destroy(star1);
             Instantiate(Star1Prefab);
             StarsCollected++;
-            Debug.Log(StarsCollected);
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Tutorial"))
             {
                 GameObject.Find("TutorialManager").GetComponent<TutorialManager>().CollectedStar = true;

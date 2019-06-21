@@ -7,10 +7,12 @@ public class LevelSelection : MonoBehaviour
 {
     public int levelCounter = 0;
     public Animator animator;
+    public int stage;
 
     void Update()
     {
-        Debug.Log(levelCounter);
+        stage = PlayerPrefs.GetInt("stage");
+
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             levelCounter++;
