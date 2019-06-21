@@ -1156,7 +1156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Selected: 0
   pauseMenuUI: {fileID: 1948981370}
-  selectedOn: {fileID: 21300000, guid: 0163c630d6e9a7c4992d57a35bf10a10, type: 3}
 --- !u!1 &653100180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,6 +1334,49 @@ Transform:
   m_Father: {fileID: 2087193452}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &711352933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711352934}
+  - component: {fileID: 711352935}
+  m_Layer: 0
+  m_Name: GameOverHandeler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711352934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711352933}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1871591113}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &711352935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711352933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40f72ddc0f4aaf40be142663d857c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &719790406
 GameObject:
   m_ObjectHideFlags: 0
@@ -4250,6 +4292,7 @@ Transform:
   - {fileID: 1305665663}
   - {fileID: 1981319737}
   - {fileID: 263832459}
+  - {fileID: 711352934}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

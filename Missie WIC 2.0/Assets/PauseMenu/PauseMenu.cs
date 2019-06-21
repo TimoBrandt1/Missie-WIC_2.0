@@ -94,7 +94,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Mainscreen");
+        SceneManager.LoadScene("PlanetSelection");
     }
 
     public void QuitGame()
