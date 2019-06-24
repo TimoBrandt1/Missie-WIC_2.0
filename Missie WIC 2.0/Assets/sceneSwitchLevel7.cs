@@ -9,7 +9,7 @@ public class sceneSwitchLevel7 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene("Mainscreen");
+            SceneManager.LoadScene("PlutoLevelSelectie");
         }
     }
 }
